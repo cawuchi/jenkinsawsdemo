@@ -3,3 +3,6 @@ variable "services" {
   type = string
   default = "test"
 }
+output "services" {
+value = var.services
+}
