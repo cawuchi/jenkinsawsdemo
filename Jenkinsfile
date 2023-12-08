@@ -20,6 +20,8 @@ pipeline{
     stage ("Testing Terraform"){
       steps{
         sh 'terraform --version'
+        sh 'terraform init'
+        sh 'terraform plan'
       }
     }
   } 
