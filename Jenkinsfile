@@ -17,5 +17,8 @@ pipeline{
         }
       }
     }
+    stage ("Testing Terraform"){
+      sh 'terraform --version'
+    }
   } 
 }
