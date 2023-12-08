@@ -18,7 +18,9 @@ pipeline{
       }
     }
     stage ("Testing Terraform"){
-      sh 'terraform --version'
+      steps{
+        sh 'terraform --version'
+      }
     }
   } 
 }
