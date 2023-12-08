@@ -4,6 +4,7 @@ pipeline{
     stage ('Build') {
       steps {
         // sh 'printenv'
+        sh 'echo "Hello"'
       }
     }
     stage ('Publish ERC') {
