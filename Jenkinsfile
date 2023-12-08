@@ -24,5 +24,10 @@ pipeline{
         sh 'terraform plan'
       }
     }
+    stage ('Testing Databricks') {
+      steps{
+        sh 'databricks clusters list'
+      }
+    }  
   } 
 }
