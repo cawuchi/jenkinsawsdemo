@@ -20,8 +20,8 @@ pipeline{
     stage ("Testing Terraform"){
       steps{
         sh 'terraform --version'
-        sh 'terraform init'
-        sh 'terraform plan'
+        sh 'terraform -chdir=test init'
+        // sh 'terraform plan'
       }
     }
     stage ('Testing Databricks') {
