@@ -10,10 +10,6 @@ clean:
 	@echo "Cleaning up..."
 	databricks api patch /api/2.0/workspace-conf --json '{ "enableDcs" : "true"}'
 
-enable2:
-	@echo "Enabling the Container Service Feature..."
-	databricks api patch /api/2.0/workspace-conf --json '{ "enableDcs" : "true"}'
-
 build:
        @echo "Building the cluster
 	 databricks clusters create --json '{ "cluster_name": "DockerCluster-image, "spark_version": "13.3.x-scala2.12", "node_type_id": "i3.xlarge", "num_workers": 0, 
