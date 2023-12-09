@@ -1,5 +1,3 @@
-# Makefile
-
 BIN_DIR = bin 
 
 all: clean build
