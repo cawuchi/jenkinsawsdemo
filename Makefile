@@ -1,6 +1,6 @@
 BIN_DIR = bin 
 
-all: enable cluster remove
+all: clean build remove
 
 test:
 	@echo "Building this project.."
@@ -14,7 +14,7 @@ enable2:
 	@echo "Enabling the Container Service Feature..."
 	databricks api patch /api/2.0/workspace-conf --json '{ "enableDcs" : "true"}'
 
-cluster:
+build:
        @echo "Building the cluster
 	 databricks clusters create --json '{ "cluster_name": "DockerCluster-image, "spark_version": "13.3.x-scala2.12", "node_type_id": "i3.xlarge", "num_workers": 0, 
          "aws_attributes": {"first_on_demand": 1, "availability": "SPOT_WITH_FALLBACK", "zone_id": "auto", "instance_profile_arn": 
