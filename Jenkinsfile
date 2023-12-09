@@ -3,7 +3,7 @@ pipeline{
   stages {
     stage ('Welcome to the Plan A') {
       steps {
-        // sh 'printenv'
+        sh 'printenv'
         sh 'echo "Excuting Plan A"'
       }
     }
