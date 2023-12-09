@@ -30,14 +30,14 @@ pipeline{
         withEnv (["DATABRICKS_HOST=${env.DATABRICKS_HOST}", "DATABRICKS_TOKEN=${env.DATABRICKS_TOKEN}"]) {
         sh 'databricks configure --token'
         sh 'databricks clusters list'
-        sh 'make enable2'
+        sh 'make clean'
         }
       }
     }
     stage ('Build and provision the Databricks cluster') {
       steps{
         withEnv (["DATABRICKS_HOST=${env.DATABRICKS_HOST}", "DATABRICKS_TOKEN=${env.DATABRICKS_TOKEN}"]) {
-           sh 'make cluster'
+           sh 'make build'
            sh 'echo "success!"'
         }
       }
