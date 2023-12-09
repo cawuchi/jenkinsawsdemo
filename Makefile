@@ -8,9 +8,9 @@ test:
 
 clean:
 	@echo "Cleaning up..."
-	rm -rf $(BIN_DIR)
+	databricks api patch /api/2.0/workspace-conf --json '{ "enableDcs" : "true"}'
 
-enable:
+enable2:
 	@echo "Enabling the Container Service Feature..."
 	databricks api patch /api/2.0/workspace-conf --json '{ "enableDcs" : "true"}'
 
