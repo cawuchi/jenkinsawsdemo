@@ -20,8 +20,8 @@ pipeline{
     stage ("Test Connection to Terraform"){
       steps{
         sh 'terraform --version'
-        // sh 'terraform -chdir=plana init'
-        // sh 'terraform -chdir=plana plan'
+        // sh 'terraform -chdir=instance init'
+        // sh 'terraform -chdir=instance plan'
       }
     }
   } 
